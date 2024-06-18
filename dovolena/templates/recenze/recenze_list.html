@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container mt-5">
+        <h1 class="mb-4">Seznam recenzí</h1>
+        <div class="list-group">
+            {% for recenze in recenze %}
+            <div class="item">
+                <div class="info">
+                    <h5> <a href="{% url 'dovolena:recenze_detail' recenze.pk %}" > {{ recenze.rating }} </a></h5>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

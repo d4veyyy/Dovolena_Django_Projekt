@@ -1,0 +1,14 @@
+ {% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+        <h1 class="mb-4">Detail účastníků</h1>
+        <div>
+            <p><strong>Jméno:</strong> {{ ucastnik.jmeno}}</p>
+            <p><strong>Příjmení:</strong> {{ ucastnik.prijmeni }}</p>
+            <p><strong>Datum narození:</strong> {{ ucastnik.datum_narozeni}}</p>
+            <p><strong>Email:</strong> {{ ucastnik.email }}</p>
+            <p><strong>Telefon:</strong> {{ ucastnik.telefon }}</p>
+        </div>
+    </div>
+{% endblock %}

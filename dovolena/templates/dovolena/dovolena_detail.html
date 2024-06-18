@@ -1,0 +1,12 @@
+ {% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+        <h1 class="mb-4">Detail dovolené</h1>
+        <div>
+            <p><strong>Destinace:</strong> {{ dovolena.destinace }}</p>
+            <p><strong>Začátek termínu:</strong> {{ dovolena.zacatek_terminu }}</p>
+            <p><strong>Konec termínu:</strong>{{ dovolena.konec_terminu }}</p>
+        </div>
+    </div>
+{% endblock %}

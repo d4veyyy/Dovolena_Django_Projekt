@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container mt-5">
+        <h1 class="mb-4">Seznam rezervací</h1>
+        <div class="list-group">
+            {% for rezervace in rezervace %}
+            <div class="item">
+                <div class="info">
+                    <h5> <a href="{% url 'dovolena:rezervace_detail' rezervace.pk %}" > {{ rezervace.pocet_ucastniku }} </a></h5>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
