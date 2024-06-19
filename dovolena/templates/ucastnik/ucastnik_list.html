@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block content %}
+
+    <div class="container mt-5">
+        <h1 class="mb-4">Seznam účastníků</h1>
+        <div class="list-group">
+            {% for ucastnik in ucastnici %}
+                <div class="item">
+                    <div class="info">
+                        <h5><a href="{% url 'dovolena:ucastnik_detail' ucastnik.pk %}"> {{ ucastnik.jmeno }} </a></h5>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
